@@ -82,7 +82,7 @@ def plot_sales_over_time(daily_sales):
     plt.show()
 
 
-# Пример использования
+
 if __name__ == "__main__":
     file_path = 'sales_data.csv'  # путь к вашему файлу с данными о продажах
     sales_data = read_sales_data(file_path)
