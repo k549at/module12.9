@@ -1,6 +1,7 @@
 import csv
 from datetime import datetime
 import matplotlib.pyplot as plt
+import collections
 
 
 def read_sales_data(file_path):
@@ -39,7 +40,8 @@ def sales_over_time(sales_data):
             daily_sales[date] += total_sale
         else:
             daily_sales[date] = total_sale
-    return daily_sales
+    od = collections.OrderedDict(sorted(daily_sales.items()))
+    return od
 
 
 def find_max_revenue_product(product_sales):
